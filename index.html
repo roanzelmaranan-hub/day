@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Month</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LANDING PAGE -->
+        <div class="card landing" id="landing">
+
+            <h1>
+                A Special Message<br>
+                For You Ma'am Mari
+            </h1>
+
+            <p class="subtext">
+                From your student 💜
+            </p>
+
+            <button class="main-btn" onclick="showMessage()">
+                ▶ CLICK HERE
+            </button>
+
+        </div>
+
+
+        <!-- MESSAGE PAGE -->
+        <div class="card message-page" id="messagePage">
+
+            <!-- SONG -->
+            <audio id="teacherSong" loop>
+                <source src="Esremborak - Mahal Magmahal [Official Music Video].mp3" type="audio/mpeg">
+            </audio>
+
+
+            <!-- IMAGE -->
+            <div class="image-wrapper">
+
+                <img 
+                    src="825261143_2485526338637006_5679419790420592185_n.jpg"
+                    alt="Happy Teacher's Month"
+                    class="tribute-img"
+                >
+
+                <div class="img-glow"></div>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+            <div class="content">
+
+                <h2>Dear Teachers,</h2>
+
+                <p>
+                    Thank you so much for everything you do for us.
+                    You are not just our teachers — you are like second
+                    parents who guide and care for us every day.
+                </p>
+
+                <p>
+                    We know teaching isn't easy. Thank you for being
+                    patient even when we are noisy or when lessons are
+                    hard to understand. You never give up on us, and
+                    that really means a lot.
+                </p>
+
+                <p>
+                    You teach us more than just what's in books.
+                    You teach us how to be kind, how to dream big,
+                    and how to become better people. We appreciate
+                    all your efforts just to help us learn and grow.
+                </p>
+
+                <p>
+                    We may not say it always, but we are truly thankful
+                    to have you. Thank you for believing in us. 💐
+                </p>
+
+                <div class="divider"></div>
+
+                <p class="signoff">
+                    With love and gratitude,<br>
+                    JAZMIN-MAYOR 21005<br>
+                    Your Student 💜
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function showMessage() {
+
+            // Hide landing page
+            document.getElementById("landing").style.display = "none";
+
+            // Show message page
+            document.getElementById("messagePage").style.display = "block";
+
+            // Play song
+            const song = document.getElementById("teacherSong");
+
+            song.play().catch(function(error) {
+                console.log("Song could not play:", error);
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
